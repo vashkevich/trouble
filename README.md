@@ -6,6 +6,10 @@
 | 4 | Try to open site in a browser on port 80. As a result, get an error page “Site is broken".  |Try to open site in a browser on port 8080. As a result, get tomcat's start page So, there is no communication between Apache and Tomcat.| 7 min| Find the path of log mod.jk in apache vhosts.conf. Check it and correct worker-name in workers.properties file. Restart Apache.  | 40 min |
 | 5|     Restart VM. Tomcat's start page become unavaliable after rebooting.   |  Restart VM. Output of the command **#service tomcat restart** says that tomcat running, but there is no tomcat process **#service tomcat status**   | 10 min | Check /etc/init.d/tomcat.Change "tomcat" username to "root". Save file and exit. Update runlevel information for system services with command **#chkconfig tomcat on**. Start Tomcat   | 30 min |
 | 6 | No iptables rules for ports 80, 22 |Run iptables -L -n| 5 min|  Add to iptables permanent rules with chattr command | 30 min |
+
+
+Answers to additional questions.
+
 #### What java version is installed?
 #sudo java -showversion 
 java version "1.7.0_79"
