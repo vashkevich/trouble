@@ -8,10 +8,11 @@
 | 6 | No iptables rules for ports 80, 22 |Run iptables -L -n| 5 min|  Add to iptables permanent rules with chattr command | 30 min |
 
 
-Answers to additional questions.
+## Answers to additional questions.
 
 #### What java version is installed?
-#sudo java -showversion 
+sudo java -showversion 
+
 java version "1.7.0_79"
 Java(TM) SE Runtime Environment (build 1.7.0_79-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)
