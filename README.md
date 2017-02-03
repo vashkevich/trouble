@@ -8,10 +8,17 @@
 | 6 | No iptables rules for ports 80, 22 |Run iptables -L -n| 5 min|  Add to iptables permanent rules with chattr command | 30 min |
 
 
+
+
+
+
+
 ## Answers to additional questions.
 
 #### What java version is installed?
+'''
 sudo java -showversion 
+'''
 
 java version "1.7.0_79"
 Java(TM) SE Runtime Environment (build 1.7.0_79-b15)
@@ -52,4 +59,4 @@ If we want to make work together Tomcat ans Apache, we should use special connec
 Main config files: worker.properties and vhosts.conf in apache, server.xml - in tomcat.
 
 #### What does it mean: “load average: 1.18, 0.95, 0.83”?
-"Load average: 1.18, 0.95, 0.83" indicates CPU loads in top util. This line of CPU load is the length of the run queue, i.e. the length of the queue of processes waiting to be run. A high load value means the run queue is long. A low value means that it is short. So, if the one minute load average is 1.18, it means that on average during that minute, there was 1.18 processes waiting to run in the run queue. This metric is irrespective of how many cores/cpu's there are. For a 2-cored system, running 1 process that consumes a whole core ( leaving the other idle ) results in a load average of 1.0. In order to decided how loaded a system is, you'll need to know the number of cores and do the division yourself
+"Load average: 1.18, 0.95, 0.83" indicates CPU loads in top util. This line of CPU load is the length of the run queue, i.e. the length of the queue of processes waiting to be run. A high load value means the run queue is long. A low value means that it is short. So, if the one minute load average is 1.18, it means that on average during that minute, there was 1.18 processes waiting to run in the run queue. This metric is irrespective of how many cores/cpu's there are. For a 2-cored system, running 1 process that consumes a whole core ( leaving the other idle ) results in a load average of 1.0. In order to decided how loaded a system is, you'll need to know the number of cores.
